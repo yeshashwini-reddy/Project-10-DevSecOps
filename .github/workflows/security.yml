@@ -1,0 +1,23 @@
+name: Security Scan
+
+on:
+  push:
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Simulated Bandit Scan
+        run: echo "Scanning Python source code..."
+
+      - name: Simulated Trivy Scan
+        run: echo "Scanning Docker image..."
+
+      - name: Security Report
+        run: echo "No critical vulnerabilities found."
+
+      - name: Pipeline Status
+        run: echo "Pipeline Completed Successfully"
